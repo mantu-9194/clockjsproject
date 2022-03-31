@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+
+        .secs{
+            position: absolute;
+            margin-left: 140px;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+         .mins{
+             position: absolute;
+             margin-top: 30px;
+             font-size: 1.2rem;
+             margin-left: 80px;
+         }
+         .hor{
+             position: absolute;
+             margin-top: 30px;
+             font-size: 1.3rem;
+             margin-left: 25px;
+         }
+
+
+
+        .container {
+            background-color: #3D087B;
+            height: 150vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px 200px;
+            grid-gap: 30px;
+            justify-content: center;
+            grid-template-areas:
+                'box1 box1 box2'
+                'box3 box3 box4'
+                'box5 box6 box7'
+                'box5 box6 box8'
+                'box5 box6 box9';
+            box-sizing: border-box;
+
+
+        }
+
+        .box1 {
+            grid-area: box1;
+            background-color: white;
+            width: 400px;
+            border-radius: 5px;
+            height: 220px;
+            align-items: center;
+            box-sizing: border-box;
+            margin-top: 130px;
+
+        }
+
+        .box2 {
+            grid-area: box2;
+            background-color: white;
+            width: 310px;
+            height: 100px;
+            border-radius: 5px;
+            z-index: 3;
+            margin-top: 100px;
+        }
+
+        #box3 {
+            grid-area: box3;
+            background-color: plum;
+            width: 400px;
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+
+            margin-top: 140px;
+        }
+
+        .box4 {
+            grid-area: box4;
+            background-color: white;
+            width: 270px;
+            height: 100px;
+            margin-top: -100px;
+            margin-left: 16px;
+            border-radius: 5px;
+            z-index: 2;
+            opacity: 60%;
+
+        }
+
+        #box5 {
+            grid-area: box5;
+            background-color: plum;
+            height: 100px;
+            margin-top: 40px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+
+
+        }
+
+        .box6 {
+            grid-area: box6;
+            background-color: plum;
+            margin-top: 40px;
+            height: 140px;
+            width: 170px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+
+        }
+
+        .box7 {
+            grid-area: box7;
+            background-color: white;
+            margin-top: -310px;
+            width: 240px;
+            height: 100px;
+            margin-left: 30px;
+            border-radius: 5px;
+            z-index: 1;
+            opacity: 30%;
+        }
+
+        #box8 {
+            grid-area: box8;
+            background-color: white;
+            margin-top: -400px;
+            height: 100px;
+            width: 300px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+
+
+        }
+
+        #box9 {
+            grid-area: box9;
+            
+            margin-top: -480px;
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+            background-position: center;
+            position: relative;
+            background-color: aliceblue;
+            background-image: url('wakeup.PNG');
+            background-repeat: no-repeat;
+            background-size: 80%;
+            
+            
+            
+        
+        }
+
+        .clk {
+            position: absolute;
+            margin-left: 280px;
+            margin-top: 30px;
+
+        }
+
+        #morning {
+            position: absolute;
+            margin-top: 170px;
+            width: 100px;
+            margin-left: 290px;
+
+        }
+
+        #afternoon{
+            position: absolute;
+            margin-left: 290px;
+            width: 100px;
+            margin-top: -7px;
+        }
+
+        #night{
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 290px;
+            width: 100px;
+        }
+
+        #evening {
+            position: absolute;
+            margin-top: 110px;
+            margin-left: 290px;
+            width: 100px;
+        }
+
+        .wake {
+            position: absolute;
+            margin-top: 8px;
+        }
+
+        .set {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: -10px;
+            font-size: 1.2rem;
+        }
+
+
+        .lunch {
+            position: absolute;
+            margin-top: 40px;
+        }
+
+        .set1 {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 45px;
+            font-size: 1.2rem;
+
+        }
+
+        .nap {
+            position: absolute;
+            margin-top: 100px;
+
+        }
+
+        .set2 {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 100px;
+            font-size: 1.2rem;
+        }
+
+        .moon {
+            position: absolute;
+            margin-top: 160px;
+
+        }
+
+        .set3 {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 165px;
+            font-size: 1.2rem;
+        }
+
+        #ampm {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color: purple;
+            margin-left: 200px;
+            margin-top: 10px;
+            text-align: center;
+            align-items: center;
+
+            font-size: 2rem;
+            border-radius: 5px;
+        }
+
+        #sec {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color: plum;
+            margin-top: 10px;
+            margin-left: 140px;
+            text-align: center;
+            align-items: center;
+
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        #min {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color: plum;
+            margin-top: 10px;
+            margin-left: 80px;
+            text-align: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #hour {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+
+            background-color: plum;
+            margin-top: 10px;
+            margin-left: 20px;
+
+
+            text-align: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: .9rem;
+        }
+
+        .t {
+            margin-left: 10px;
+            position: relative;
+            top: 20px;
+
+
+        }
+
+        .btn {
+            margin-top: 50px;
+            height: 100px;
+            width: 200px;
+            border-radius: 5px;
+            font-size: 1.7rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: plum;
+        }
+
+        .boox4 {
+            display: none;
+        }
+
+
+
+
+        button .boox5 {
+            display: none;
+
+
+        }
+
+        button:hover .box5 {
+            display: none;
+        }
+
+        button:hover .boox5 {
+            display: contents;
+            background-color: cadetblue;
+
+        }
+
+
+        .vertical {
+            position: absolute;
+            border: 1px solid black;
+            background-color: black;
+            margin-left: 17px;
+            height: 20px;
+            margin-top: 24px;
+        }
+
+        .vertical1 {
+            position: absolute;
+            border: 1.5px solid black;
+            background-color: black;
+            margin-left: 13px;
+            height: 20px;
+            margin-top: 140px;
+        }
+
+        .vertical2 {
+            position: absolute;
+            border: 1px solid black;
+            background-color: black;
+            margin-left: 16px;
+            height: 20px;
+            margin-top: 75px;
+        }
+
+
+
+
+
+
+
+
+        @media (max-width:600px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+
+                grid-template-areas:
+                    'box1'
+                    'box2'
+                    'box3'
+                    'box4'
+                    'box5'
+                    'box6'
+                    'box7'
+                    'box8'
+                    'box9'
+            }
+
+
+
+            .clk {
+                position: absolute;
+                margin-left: 70px;
+                margin-top: -25px;
+            }
+
+
+
+            .container {
+                max-width: 100vw;
+                max-height: 1500px;
+                margin-left: -8px;
+                margin-top: -8px;
+            }
+
+
+            .box1 {
+                width: 100vw;
+                height: 500px;
+                margin-top: 90px;
+                margin-left: 8px;
+                height: 220px;
+                box-sizing: border-box;
+
+            }
+
+            .box2 {
+                width: 100vw;
+                margin-left: 8px;
+                margin-top: -20px;
+                box-sizing: border-box;
+
+
+
+            }
+
+            #box3 {
+
+                width: 100vw;
+                margin-left: 8px;
+                margin-top: 100px;
+
+            }
+
+            .box4 {
+                width: 100vw;
+                margin-left: 8px;
+                display: none;
+
+            }
+
+            #box5 {
+                width: 50vw;
+                margin-left: 100px;
+                margin-top: -280px;
+            }
+
+            .box6 {
+                width: 100vw;
+                margin-left: 8px;
+                box-sizing: border-box;
+                margin-top: -80px;
+
+            }
+
+            .box7 {
+                width: 100vw;
+                margin-left: 8px;
+                display: none;
+
+            }
+
+            #box8 {
+                width: 100vw;
+                margin-left: 8px;
+                box-sizing: border-box;
+                margin-top: -40px;
+
+            }
+
+            #box9 {
+                width: 100vw;
+                margin-left: 3px;
+                margin-top: -10px;
+                box-sizing: border-box;
+            }
+
+            .btn {
+                box-sizing: border-box;
+                margin-top: -20px;
+                margin-left: 8px;
+            }
+
+            .clk {
+                padding: 30px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="clk">
+
+            <img src="clocklogo.png">
+        </span>
+
+
+
+        <div class="box1">
+            <span class="wake"><img src="wake_up.svg"> </span><br><span class="set">set wake up time</span>
+            <select name="morning"  id="morning">
+                <option value="0">Select Time</option>
+            <option value="1">1AM-2AM</option>
+            <option value="2">2AM-3AM</option>
+            <option value="3">3AM-4AM</option>
+            <option value="4">4AM-5AM</option>
+            <option value="5">5AM-6AM</option>
+            <option value="6">6AM-7AM</option>
+            <option value="7">7AM-8AM</option>
+            <option value="8">8AM-9AM</option>
+            <option value="9">9AM-10AM</option>
+            <option value="10">10AM-11AM</option>
+            <option value="11">11AM-12PM</option>
+            <option value="12">12PM-1PM</option>
+            <option value="13">1PM-2PM</option>
+            <option value="14">2PM-3PM</option>
+            <option value="15">3PM-4PM</option>
+            <option value="16">4PM-5PM</option>
+            <option value="17">5PM-6PM</option>
+            <option value="18">6PM-7PM</option>
+            <option value="19">7PM-8PM</option>
+            <option value="20">8PM-9PM</option>
+            <option value="21">9PM-10PM</option>
+            <option value="22">10PM-11PM</option>
+            <option value="23">11PM-12AM</option>
+            </select>
+            <span class="vertical"></span>
+            <span class="lunch"> <img src="lunch_time.svg"></span><span class="set1">set lunch time</span>
+            <select name="afternoon"  id="afternoon">
+                <option value="0">Select Time</option>
+            <option value="1">1AM-2AM</option>
+            <option value="2">2AM-3AM</option>
+            <option value="3">3AM-4AM</option>
+            <option value="4">4AM-5AM</option>
+            <option value="5">5AM-6AM</option>
+            <option value="6">6AM-7AM</option>
+            <option value="7">7AM-8AM</option>
+            <option value="8">8AM-9AM</option>
+            <option value="9">9AM-10AM</option>
+            <option value="10">10AM-11AM</option>
+            <option value="11">11AM-12PM</option>
+            <option value="12">12PM-1PM</option>
+            <option value="13">1PM-2PM</option>
+            <option value="14">2PM-3PM</option>
+            <option value="15">3PM-4PM</option>
+            <option value="16">4PM-5PM</option>
+            <option value="17">5PM-6PM</option>
+            <option value="18">6PM-7PM</option>
+            <option value="19">7PM-8PM</option>
+            <option value="20">8PM-9PM</option>
+            <option value="21">9PM-10PM</option>
+            <option value="22">10PM-11PM</option>
+            <option value="23">11PM-12AM</option>
+            </select>
+            <span class="vertical1"></span>
+            <span class="nap"><img src="nap_time.svg"></span><span class="set2">set nap time</span>
+            <select name="evening" id="evening">
+                <option value="0">Select Time</option>
+                <option value="1">1AM-2AM</option>
+                <option value="2">2AM-3AM</option>
+                <option value="3">3AM-4AM</option>
+                <option value="4">4AM-5AM</option>
+                <option value="5">5AM-6AM</option>
+                <option value="6">6AM-7AM</option>
+                <option value="7">7AM-8AM</option>
+                <option value="8">8AM-9AM</option>
+                <option value="9">9AM-10AM</option>
+                <option value="10">10AM-11AM</option>
+                <option value="11">11AM-12PM</option>
+                <option value="12">12PM-1PM</option>
+                <option value="13">1PM-2PM</option>
+                <option value="14">2PM-3PM</option>
+                <option value="15">3PM-4PM</option>
+                <option value="16">4PM-5PM</option>
+                <option value="17">5PM-6PM</option>
+                <option value="18">6PM-7PM</option>
+                <option value="19">7PM-8PM</option>
+                <option value="20">8PM-9PM</option>
+                <option value="21">9PM-10PM</option>
+                <option value="22">10PM-11PM</option>
+                <option value="23">11PM-12AM</option>
+            </select>
+            <span class="vertical2"></span>
+            <span class="moon"> <img src="moon1.jpg" height="30px" width="30px"></span><span class="set3">set night
+                time</span>
+            <select name="night" id="night">
+                <option value="0">Select Time</option>
+                <option value="1">1AM-2AM</option>
+                <option value="2">2AM-3AM</option>
+                <option value="3">3AM-4AM</option>
+                <option value="4">4AM-5AM</option>
+                <option value="5">5AM-6AM</option>
+                <option value="6">6AM-7AM</option>
+                <option value="7">7AM-8AM</option>
+                <option value="8">8AM-9AM</option>
+                <option value="9">9AM-10AM</option>
+                <option value="10">10AM-11AM</option>
+                <option value="11">11AM-12PM</option>
+                <option value="12">12PM-1PM</option>
+                <option value="13">1PM-2PM</option>
+                <option value="14">2PM-3PM</option>
+                <option value="15">3PM-4PM</option>
+                <option value="16">4PM-5PM</option>
+                <option value="17">5PM-6PM</option>
+                <option value="18">6PM-7PM</option>
+                <option value="19">7PM-8PM</option>
+                <option value="20">8PM-9PM</option>
+                <option value="21">9PM-10PM</option>
+                <option value="22">10PM-11PM</option>
+                <option value="23">11PM-12AM</option>
+            </select>
+            <span class="vertical3"></span>
+
+
+        </div>
+        <div class="box2">
+            <span class="t">TIME
+                
+            </span>
+            
+            <span id="ampm">AM<br>
+
+            </span>
+            <span id="sec">secs
+                <br>
+                </span><span class="secs">SECS</span>
+            <span id="min">00<br>
+                MINS</span><span class="mins">MINS</span>
+            <span id="hour">10<br>
+            
+                HOURS</span><span class="hor">HRS</span>
+        </div>
+        <div id="box3">GOOD MORNING!!WAKE UP!!!</div>
+        <div class="box4"></div>
+        <button id="box5" onclick="setTime()"> <b>Party time !!</b> </button>
+        <div class="box6">Wake up time:10AM-11AM<br><br>
+            Lunch Time:12PM-01PM<br><br>
+            Nap Time:4PM-5PM<br><br>
+            Night Time:8PM-9AM</div>
+        <div class="box7">7</div>
+        <div id="box8">SOME HEALTHY BREAKFAST</div>
+        <div id="box9">
+            
+        </div>
+            
+        </div>
+
+      
+
+
+
+
+        <script src="cl.js"></script>
+    </div>
+</body>
+
+</html>
