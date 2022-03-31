@@ -8,7 +8,7 @@ function clock(){
     var  hrs=time.getHours();
     var  mins=time.getMinutes();
     var  secs=time.getSeconds();
-    var  am_pm="PM";
+    var  am_pm="AM";
 
 
 
@@ -20,7 +20,7 @@ function clock(){
     }
     if(hrs>12){
         hrs=hrs-12;
-        am_pm="AM"
+        am_pm="PM"
     }
     if(hrs<10){
         hrs="0"+hrs;
